@@ -1,0 +1,21 @@
+{% extends 'partials/_base.html' %}
+{% load static  %}
+
+{% block content %}
+
+ 
+<!-- contact section -->
+<div class="contact-section" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div class="form-container" style="margin: 0 auto; width: 50%;">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Gönder</button>
+        </form>
+    </div>
+</div>
+  <!-- end contact section -->
+
+
+
+{% endblock %}
